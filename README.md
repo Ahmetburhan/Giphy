@@ -1,2 +1,1 @@
-# Giphy
-Giphy Redefined
+<img align="center" src="/Giphy/GiphyAPI/raw/master/api_giphy_header.gif" width="100%" alt="API Giphy logo" style="max-width:100%;">

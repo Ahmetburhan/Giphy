@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Giphy Playground Enchanced</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Shrikhand" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+        <!-- <script type="text/javascript">
+        $(document).ready(function(){
+        $("#myModal").modal('show');});
+      </script> -->
+
+
+    </head>
+
+    <body>
+
+      <header>
+       <div class="container">
+        <img class="large-logo grid_4" height="99" src="assets/images/giphy_white_logo_large.png">
+
+        <div id="buttons-view"></div>
+
+        <div class="container user-center grid_4 prefix_4">
+    <h1>Movie Search</h1>
+    <form id="movie-form">
+      <label for="movie-input">Add a Topic</label>
+      <input type="text" id="movie-input"><br>
+
+      <!-- Button triggers new movie to be added -->
+      <input id="add-movie" type="submit" value="Topic Submit">
+    <!--   <button id="add-movie"type="submit" class="btn btn-success btn-lg btn-block">Submit</button> -->
+    </form>
+  </div>
+
+
+      <!-- <img src='assets/images/header.jpg' alt='headerImg' width='100%'> -->
+    </header>
+    <div class='container'>
+      <!-- Rendered Buttons will get Dumped Here  -->
+
+      
+
+   <!-- Movies will Get Dumped Dere -->
+    <div id="movies-view"></div>
+
+
+      <!-- <button class='btn btn-primary' id='startBtn'>Start</button> -->
+
+    </div>
+
+    <!-- <div class='container user-center grid_4 prefix_4'>
+      <div id="user-login" class="user-center grid_4 prefix_4">
+        <img class="large-logo grid_4" height="99" src="assets/images/giphy_white_logo_large.png">
+
+        <div class="form-group grid_4 user-center">
+          <label for="searchMe">Please Search Topic You Wish!</label>
+          <label class="col-form-label col-form-label-lg grid_4" for="inputLarge"></label> 
+          <input class="form-control form-control-lg" type="text" placeholder="Please Search Topic You Wish!" id="add-movie">
+
+        </div>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your input with anyone else. It's S@cR#t</small>
+      </fieldset>
+      <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+    </fieldset>
+  </div> -->
+</div>
+
+
+</form>
+</div>
+</div>
+
+
+
+
+<!-- //animated background-->
+<div id="animated-background-wrapper">
+  <video id="animated-background" preload="auto" autoplay="autoplay" loop="loop" style="opacity: 0.6;"><source src="https://media.giphy.com/login-join-backgrounds/savage-street.mp4" type="video/mp4"><source src="https://media.giphy.com/login-join-backgrounds/savage-street.webm" type="video/webm"></video>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Instruct Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title red">Welcome to Giphy Game  tutorial!</h3>
+        </div>
+        <h3>Instructions</h3>
+        <p>If you are an enthutiast!, you dont need <-!this!-> ;-)</p>
+        <p>
+          Press the submit button and play along. After your topic input, our servers will calculate push the images on appropiate divs.
+        </p>
+        <div class="modal-body">
+          <p>
+            <img class="img-responsive" src="assets/images/giphy.gif" width="498" alt="giphy" />
+          </p>
+
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-success" data-dismiss="modal" id='startBtn'>Dismiss</button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  
+  <script type="text/javascript" src="assets/javascript/script.js"></script>
+
+</body>
+
+<footer>
+  <button class='btn btn-primary' id='footerImg' data-toggle="modal" data-target="#myModal">Instructions</button>
+  <!-- <img src='assets/images/right2.png' id='headerImg' width='100%'> -->
+</footer>
+
+</html>

@@ -1,0 +1,139 @@
+body{
+/*	background: url('../images/body.jpg');
+*/
+    background-color: #121212;
+    color: #fff;
+    font-family: 'interface','Helvetica Neue',helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    height: 100%;
+    letter-spacing: 0;
+    margin: 0 auto 100px auto;
+    min-height: 500px;
+    text-align: center;
+    width: 1040px;
+
+}
+
+#animated-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%;
+    overflow-y: hidden;
+}
+
+#animated-background-wrapper {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1000;
+    min-width: 960px;
+}
+
+
+.user-content .user-center {
+    left: 50%;
+    margin: -50px 0 0;
+    padding: 0;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.container_12 .grid_4 {
+    width: 336px;
+}
+.form-control {
+	width: 336px;
+
+}
+
+.btn-block {
+	width: 336px;
+
+}
+
+div {
+	    color: cornflowerblue;
+}
+header{
+	margin-bottom: 20px;
+}
+
+#footerImg {
+	position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 25%;
+
+}
+.btn-primary,.reset{
+	background-color: #313477;
+	color: white;
+	font-family: 'Shrikhand', cursive;
+	font-size: 30px;
+	padding: 20px;
+	margin-top: 50px;
+}
+.btn-primary:hover, .reset:hover{
+	background-color: #ff9933;
+}
+
+.container{
+	margin-top: 15px;
+	text-align: center;
+	height: 100%;
+	width: 700px;
+}
+
+  .red {
+  	font-family: Pacifico !important;
+  	font-size: 28px;
+    color: crimson !important;
+  }
+
+
+  .modal-content {
+  	padding: 7%;
+  }
+h2, #message, #finalMessage{
+	font-family: 'Shrikhand', cursive;
+	color: white;
+}
+
+footer{
+ position: relative;
+    top: 0;
+    max-height: 90%;
+}
+
+.thisChoice:hover{
+	background-color: #ff9933;
+	color: white;
+	padding: 10px;
+}
+
+#gif{
+	margin: 30px;
+}
+
+@media screen and (max-width:640px){
+	.container{
+		width: 500px;
+		margin-top: 200px;
+		size: 200%;
+	}	
+}
