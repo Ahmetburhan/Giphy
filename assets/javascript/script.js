@@ -1,5 +1,5 @@
 // Initial array of movies
-      var movies = ["Borat", "Matrix", "Titanic", "Cat"];
+var movies = ["Borat", "Matrix", "Titanic", "Cat"];
 
       // displayMovieInfo function re-renders the HTML to display the appropriate content
       function displayMovieInfo() {
@@ -16,13 +16,14 @@
           console.log(queryURL);
 
           console.log(response);
+          $("#movies-view").empty(); // erasing anything in this div id so that it doesnt keep any from the previous click
 
 
- // storing the data from the AJAX request in the results variable
-          var results = response.data;
+           // storing the data from the AJAX request in the results variable
+           var results = response.data;
 
            // Looping through each result item
-          for (var i = 0; i < results.length; i++) {
+           for (var i = 0; i < results.length; i++) {
 
 
           // Creating a div to hold the movie
@@ -43,14 +44,20 @@
 
 
           // Appending the paragraph and image tag to the animalDiv
-            movieDiv.append(p);
-            movieDiv.append(topicImage);
+          movieDiv.append(p);
+          movieDiv.append(topicImage);
 
             // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
             $("#movies-view").prepend(movieDiv);
 
           // Creating an element to hold the image
-          var image = $("<img>").attr("src", results[i].images.fixed_height.url);
+          var image = $("<img>");
+          image.attr("src", results[i].images.fixed_height.url);
+          image.attr("data-still",results[i].images.fixed_height_still.url); // still image
+          image.attr("data-animate",results[i].images.fixed_height.url); // animated image
+          image.attr("data-state", "still"); // set the image state
+          image.attr("src", results[i].images.fixed_height.url);
+          image.addClass("image");
 
           // Appending the image
           movieDiv.append(image);
@@ -101,6 +108,19 @@
 
       // Adding a click event listener to all elements with a class of "movie"
       $(document).on("click", ".movie", displayMovieInfo);
+
+      $(document).on("click", ".image", function(){
+        var state = $(this).attr('data-state');
+    if ( state == 'animate'){
+        $(this).attr('src', $(this).data('still'));
+        $(this).attr('data-state', 'still');
+    }else{
+        $(this).attr('src', $(this).data('animate'));
+        $(this).attr('data-state', 'animate');
+    }
+      });
+
+      
 
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
