@@ -105,6 +105,19 @@ button:hover, .reset:hover{
     background-color: #ff9933;
 }
 
+input,.reset{
+    background-color: #313477;
+    color: white;
+    font-family: 'Shrikhand', cursive;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+input:hover, .reset:hover{
+    background-color: #ff9933;
+}
+
 .container{
 	margin-top: 15px;
 	text-align: center;

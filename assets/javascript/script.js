@@ -31,8 +31,8 @@
           // Storing the rating data
           var rating = response.Rated;
 
-          // Creating an element to have the rating displayed
-          var p = $("<p>").text("Rating: " + results[i].rating);
+          // Creating an element with h2 tag to have the rating displayed
+          var p = $("<h2>").text("Rating: " + results[i].rating);
 
           // Creating and storing an image tag
           var topicImage = $("<img>");
