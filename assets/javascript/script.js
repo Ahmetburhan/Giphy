@@ -21,7 +21,11 @@ var movies = ["Borat", "Matrix", "Titanic", "Cat"];
 
            // storing the data from the AJAX request in the results variable
            var results = response.data;
+          console.log(results);
 
+           if (results == ""){
+            alert("There isn't a gif for this selected button");
+          }
            // Looping through each result item
            for (var i = 0; i < results.length; i++) {
 
@@ -52,11 +56,11 @@ var movies = ["Borat", "Matrix", "Titanic", "Cat"];
 
           // Creating an element to hold the image
           var image = $("<img>");
-          image.attr("src", results[i].images.fixed_height.url);
+          var staticSrc = results[i].images.fixed_height_still.url;
+          image.attr("src", staticSrc);
           image.attr("data-still",results[i].images.fixed_height_still.url); // still image
           image.attr("data-animate",results[i].images.fixed_height.url); // animated image
-          image.attr("data-state", "still"); // set the image state
-          image.attr("src", results[i].images.fixed_height.url);
+          image.attr("data-state", "still"); // set the image animate
           image.addClass("image");
 
           // Appending the image
@@ -105,12 +109,28 @@ var movies = ["Borat", "Matrix", "Titanic", "Cat"];
         // Calling renderButtons which handles the processing of our movie array
         renderButtons();
       });
-
+      // $("image").on("click", function() {
+      //       // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+      //       var state = $(this).attr("data-state");
+      //       // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+      //       // Then, set the image's data-state to animate
+      //       // Else set src to the data-still value
+      //       if (state === "still") {
+      //         $(this).attr("src", $(this).attr("data-animate"));
+      //         $(this).attr("data-state", "animate");
+      //       } else {
+      //         $(this).attr("src", $(this).attr("data-still"));
+      //         $(this).attr("data-state", "still");
+      //       }
+      //     });
       // Adding a click event listener to all elements with a class of "movie"
       $(document).on("click", ".movie", displayMovieInfo);
+      
+    // Document Event Listeners
 
-      $(document).on("click", ".image", function(){
-        var state = $(this).attr('data-state');
+
+    $(document).on('mouseover', ".image", function(){
+       var state = $(this).attr('data-state');
     if ( state == 'animate'){
         $(this).attr('src', $(this).data('still'));
         $(this).attr('data-state', 'still');
@@ -118,9 +138,8 @@ var movies = ["Borat", "Matrix", "Titanic", "Cat"];
         $(this).attr('src', $(this).data('animate'));
         $(this).attr('data-state', 'animate');
     }
-      });
+    });
 
-      
 
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
