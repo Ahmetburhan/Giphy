@@ -1,1 +1,1 @@
-<img align="center" src="/Giphy/GiphyAPI/raw/master/api_giphy_header.gif" width="100%" alt="API Giphy logo" style="max-width:100%;">
+<img align="center" src="/api_giphy_header.gif" width="100%" alt="API Giphy logo" style="max-width:100%;">
