@@ -2,6 +2,7 @@
 https://ahmetburhan.github.io/Giphy/
 
 
+Giphy Redefined. Simply search for the gif you liked and see tens of giphies waiting for you to start animating by hovering over them. https://ahmetburhan.github.io/Giphy/
 
 <img align="center" src="/api_giphy_header.gif" width="100%" alt="API Giphy logo" style="max-width:100%;">
 
